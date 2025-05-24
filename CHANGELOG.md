@@ -1,3 +1,10 @@
+## [0.1.3](https://github.com/cloud-copilot/iam-utils/compare/v0.1.2...v0.1.3) (2025-05-24)
+
+
+### Bug Fixes
+
+* Fix imports extension ([c43fd06](https://github.com/cloud-copilot/iam-utils/commit/c43fd0627fb9af643dc03ac2048427fc743f02b2))
+
 ## [0.1.2](https://github.com/cloud-copilot/iam-utils/compare/v0.1.1...v0.1.2) (2025-05-24)
 
 
