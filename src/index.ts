@@ -3,5 +3,6 @@ export {
   convertAssumedRoleArnToRoleArn,
   convertRoleArnToAssumedRoleArn,
   isAssumedRoleArn,
+  isFederatedUserArn,
   isIamUserArn
 } from './principals.js'
