@@ -1,3 +1,10 @@
+## [0.1.4](https://github.com/cloud-copilot/iam-utils/compare/v0.1.3...v0.1.4) (2025-05-24)
+
+
+### Features
+
+* Exporting addition method ([b9265ae](https://github.com/cloud-copilot/iam-utils/commit/b9265ae2e09a486741bd5b3b552955eb7a345934))
+
 ## [0.1.3](https://github.com/cloud-copilot/iam-utils/compare/v0.1.2...v0.1.3) (2025-05-24)
 
 
