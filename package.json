@@ -1,7 +1,17 @@
 {
   "name": "@cloud-copilot/iam-utils",
   "version": "0.0.1",
-  "description": "",
+  "description": "Various utilities for working with AWS IAM information",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "types": "dist/cjs/index.d.ts",
   "keywords": [
     "aws",
     "iam",
