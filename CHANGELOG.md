@@ -1,3 +1,10 @@
+## [0.1.5](https://github.com/cloud-copilot/iam-utils/compare/v0.1.4...v0.1.5) (2025-05-25)
+
+
+### Features
+
+* Add isIamRoleArn function ([e81d0f4](https://github.com/cloud-copilot/iam-utils/commit/e81d0f42cd44a74aa8e4245bdd4651065ef1ee9b))
+
 ## [0.1.4](https://github.com/cloud-copilot/iam-utils/compare/v0.1.3...v0.1.4) (2025-05-24)
 
 
