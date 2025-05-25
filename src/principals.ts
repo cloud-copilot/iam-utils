@@ -49,6 +49,18 @@ export function isIamUserArn(principal: string): boolean {
   return userArnRegex.test(principal)
 }
 
+const iamRoleArnRegex = /^arn:[a-zA-Z\-]+:iam::\d{12}:role\/.*$/
+
+/**
+ * Test if a principal string is an IAM Role ARN
+ *
+ * @param principal the principal string to test
+ * @returns true if the principal is an IAM role ARN, false otherwise
+ */
+export function isIamRoleArn(principal: string): boolean {
+  return iamRoleArnRegex.test(principal)
+}
+
 const federatedUserArnRegex = /^arn:[a-zA-Z\-]+:sts::\d{12}:federated-user\/.*$/
 
 /**

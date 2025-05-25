@@ -4,6 +4,7 @@ import {
   convertRoleArnToAssumedRoleArn,
   isAssumedRoleArn,
   isFederatedUserArn,
+  isIamRoleArn,
   isIamUserArn
 } from './principals.js'
 
@@ -179,5 +180,40 @@ describe('isFederatedUserArn', () => {
 
     //Then it should return true
     expect(result).toBe(true)
+  })
+
+  describe('isIamRoleArn', () => {
+    it('should return true for IAM role ARN', () => {
+      //Given an IAM role ARN
+      const roleArn = 'arn:aws:iam::123456789012:role/role-name'
+
+      //When we check if it is an IAM role ARN
+      const result = isIamRoleArn(roleArn)
+
+      //Then it should return true
+      expect(result).toBe(true)
+    })
+
+    it('should return false for non-IAM role ARN', () => {
+      //Given a non-IAM role ARN
+      const userArn = 'arn:aws:iam::123456789012:user/user-name'
+
+      //When we check if it is an IAM role ARN
+      const result = isIamRoleArn(userArn)
+
+      //Then it should return false
+      expect(result).toBe(false)
+    })
+
+    it('should work for a different partition', () => {
+      //Given an IAM role ARN with a different partition
+      const roleArn = 'arn:aws-cn:iam::123456789012:role/role-name'
+
+      //When we check if it is an IAM role ARN
+      const result = isIamRoleArn(roleArn)
+
+      //Then it should return true
+      expect(result).toBe(true)
+    })
   })
 })
