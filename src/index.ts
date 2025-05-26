@@ -2,8 +2,10 @@ export { getResourceSegments, splitArnParts, type ArnParts } from './arn.js'
 export {
   convertAssumedRoleArnToRoleArn,
   convertRoleArnToAssumedRoleArn,
+  isArnPrincipal,
   isAssumedRoleArn,
   isFederatedUserArn,
   isIamRoleArn,
-  isIamUserArn
+  isIamUserArn,
+  isServicePrincipal
 } from './principals.js'
