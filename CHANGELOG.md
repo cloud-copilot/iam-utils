@@ -1,3 +1,10 @@
+## [0.1.6](https://github.com/cloud-copilot/iam-utils/compare/v0.1.5...v0.1.6) (2025-05-26)
+
+
+### Features
+
+* New functions for service principals ([1acf120](https://github.com/cloud-copilot/iam-utils/commit/1acf12008161cece696f899c2936223e2e57df62))
+
 ## [0.1.5](https://github.com/cloud-copilot/iam-utils/compare/v0.1.4...v0.1.5) (2025-05-25)
 
 
