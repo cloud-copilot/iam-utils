@@ -72,3 +72,23 @@ const federatedUserArnRegex = /^arn:[a-zA-Z\-]+:sts::\d{12}:federated-user\/.*$/
 export function isFederatedUserArn(principal: string): boolean {
   return federatedUserArnRegex.test(principal)
 }
+
+/**
+ * Test if a principal string is an ARN
+ *
+ * @param principal the principal string to test
+ * @returns true if the principal is an ARN, false otherwise
+ */
+export function isArnPrincipal(principal: string): boolean {
+  return principal.startsWith('arn:')
+}
+
+/**
+ * Test if a principal string is a service principal
+ *
+ * @param principal the principal string to test
+ * @returns true if the principal is a service principal, false otherwise
+ */
+export function isServicePrincipal(principal: string): boolean {
+  return !isArnPrincipal(principal) && principal.endsWith('amazonaws.com')
+}

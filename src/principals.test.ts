@@ -5,7 +5,8 @@ import {
   isAssumedRoleArn,
   isFederatedUserArn,
   isIamRoleArn,
-  isIamUserArn
+  isIamUserArn,
+  isServicePrincipal
 } from './principals.js'
 
 describe('convertAssumedRoleArnToRoleArn', () => {
@@ -215,5 +216,53 @@ describe('isFederatedUserArn', () => {
       //Then it should return true
       expect(result).toBe(true)
     })
+  })
+})
+
+describe('isArnPrincipal', () => {
+  it('should return true for an IAM user ARN', () => {
+    //Given an IAM user ARN
+    const userArn = 'arn:aws:iam::123456789012:user/user-name'
+
+    //When we check if it is an ARN principal
+    const result = isIamUserArn(userArn)
+
+    //Then it should return true
+    expect(result).toBe(true)
+  })
+
+  it('should return false for a service principal', () => {
+    //Given a service principal
+    const servicePrincipal = 'ec2.amazonaws.com'
+
+    //When we check if it is an ARN principal
+    const result = isIamUserArn(servicePrincipal)
+
+    //Then it should return false
+    expect(result).toBe(false)
+  })
+})
+
+describe('isServicePrincipal', () => {
+  it('should return true for a service principal', () => {
+    //Given a service principal
+    const servicePrincipal = 'ec2.amazonaws.com'
+
+    //When we check if it is a service principal
+    const result = isServicePrincipal(servicePrincipal)
+
+    //Then it should return true
+    expect(result).toBe(true)
+  })
+
+  it('should return false for an IAM user ARN', () => {
+    //Given an IAM user ARN
+    const userArn = 'arn:aws:iam::123456789012:user/user-name'
+
+    //When we check if it is a service principal
+    const result = isServicePrincipal(userArn)
+
+    //Then it should return false
+    expect(result).toBe(false)
   })
 })
