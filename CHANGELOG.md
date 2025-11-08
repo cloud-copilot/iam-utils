@@ -1,3 +1,10 @@
+## [0.1.31](https://github.com/cloud-copilot/iam-utils/compare/v0.1.30...v0.1.31) (2025-11-08)
+
+
+### Bug Fixes
+
+* Remove GuardDog package scan ([13b65a0](https://github.com/cloud-copilot/iam-utils/commit/13b65a05cadfdded6ae98b682edd6562324450e4))
+
 ## [0.1.30](https://github.com/cloud-copilot/iam-utils/compare/v0.1.29...v0.1.30) (2025-11-08)
 
 ## [0.1.29](https://github.com/cloud-copilot/iam-utils/compare/v0.1.28...v0.1.29) (2025-11-01)
