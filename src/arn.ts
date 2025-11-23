@@ -1,10 +1,38 @@
 export interface ArnParts {
+  /**
+   * The partition of the ARN such as aws, aws-cn, aws-us-gov
+   */
   partition: string | undefined
+
+  /**
+   * The service of the ARN such as s3, ec2, iam
+   */
   service: string | undefined
+
+  /**
+   * The region of the ARN such as us-east-1, us-west-2
+   */
   region: string | undefined
+
+  /**
+   * The account ID of the ARN
+   */
   accountId: string | undefined
+
+  /**
+   * The resource portion of the ARN, includes the resource type, path and name
+   */
   resource: string | undefined
+
+  /**
+   * The resource type of the ARN, such as instance, user, topic, may be undefined for
+   * some S3 buckets.
+   */
   resourceType: string | undefined
+
+  /**
+   * The resource path and name of the ARN, such as Development/user1, or MyTopic or my-bucket/my-object.txt
+   */
   resourcePath: string | undefined
 }
 
