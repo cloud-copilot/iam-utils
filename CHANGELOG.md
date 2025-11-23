@@ -1,3 +1,10 @@
+## [0.1.34](https://github.com/cloud-copilot/iam-utils/compare/v0.1.33...v0.1.34) (2025-11-23)
+
+
+### Features
+
+* feat: New function isS3BucketOrObjectArn ([57db335](https://github.com/cloud-copilot/iam-utils/commit/57db335dea531e8285370ecd51aa36cdf7ff3866))
+
 ## [0.1.33](https://github.com/cloud-copilot/iam-utils/compare/v0.1.32...v0.1.33) (2025-11-22)
 
 ## [0.1.32](https://github.com/cloud-copilot/iam-utils/compare/v0.1.31...v0.1.32) (2025-11-15)
