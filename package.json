@@ -1,6 +1,6 @@
 {
   "name": "@cloud-copilot/iam-utils",
-  "version": "0.1.35",
+  "version": "0.1.36",
   "description": "Various utilities for working with AWS IAM information",
   "exports": {
     ".": {
