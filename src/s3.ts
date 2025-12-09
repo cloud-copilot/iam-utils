@@ -20,3 +20,13 @@ export function isS3BucketOrObjectArn(arn: string): boolean {
   }
   return true
 }
+
+/**
+ * Get the bucket ARN from an S3 bucket or object ARN. Does not validate the input ARN.
+ *
+ * @param bucketOrObjectArn the ARN of the S3 bucket or object
+ * @returns the ARN of the S3 bucket
+ */
+export function bucketArn(bucketOrObjectArn: string): string {
+  return bucketOrObjectArn.split('/').at(0)!
+}

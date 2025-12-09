@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { isS3BucketOrObjectArn } from './s3.js'
+import { bucketArn, isS3BucketOrObjectArn } from './s3.js'
 
 describe('isS3BucketOrObjectArn', () => {
   it('should return true for a valid S3 bucket ARN', () => {
@@ -16,6 +16,17 @@ describe('isS3BucketOrObjectArn', () => {
   it('should return true for a valid S3 object ARN', () => {
     //Given a valid S3 object ARN
     const arn = 'arn:aws:s3:::my-bucket/my-object'
+
+    //When checking if it is an S3 bucket or object ARN
+    const result = isS3BucketOrObjectArn(arn)
+
+    //Then the result should be true
+    expect(result).toBe(true)
+  })
+
+  it('should return true for a valid S3 object ARN with a period', () => {
+    //Given a valid S3 object ARN
+    const arn = 'arn:aws:s3:::my-bucket/invoice.pdf'
 
     //When checking if it is an S3 bucket or object ARN
     const result = isS3BucketOrObjectArn(arn)
@@ -100,4 +111,31 @@ describe('isS3BucketOrObjectArn', () => {
     //Then the result should be false
     expect(result).toBe(false)
   })
+})
+
+describe('bucketArn', () => {
+  const tests = [
+    { input: 'arn:aws:s3:::my-bucket/my-object', expected: 'arn:aws:s3:::my-bucket' },
+    { input: 'arn:aws:s3:::my-bucket', expected: 'arn:aws:s3:::my-bucket' },
+    {
+      input: 'arn:aws:s3:::my-bucket/folder/subfolder/file.txt',
+      expected: 'arn:aws:s3:::my-bucket'
+    },
+    { input: 'arn:aws:s3:::bucket-name/invoice.pdf', expected: 'arn:aws:s3:::bucket-name' },
+    { input: 'arn:aws:s3:::my-bucket/', expected: 'arn:aws:s3:::my-bucket' },
+    { input: 'arn:aws:s3:::my-bucket/path/to/deep/object', expected: 'arn:aws:s3:::my-bucket' }
+  ]
+
+  for (const test of tests) {
+    it(`should return ${test.expected} for ${test.input}`, () => {
+      // Given the input
+      const input = test.input
+
+      // When getting the bucket ARN
+      const result = bucketArn(input)
+
+      // Then the result should be the expected bucket ARN
+      expect(result).toBe(test.expected)
+    })
+  }
 })

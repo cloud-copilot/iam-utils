@@ -9,4 +9,4 @@ export {
   isIamUserArn,
   isServicePrincipal
 } from './principals.js'
-export { isS3BucketOrObjectArn } from './s3.js'
+export { bucketArn, isS3BucketOrObjectArn } from './s3.js'
