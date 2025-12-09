@@ -1,3 +1,10 @@
+## [0.1.37](https://github.com/cloud-copilot/iam-utils/compare/v0.1.36...v0.1.37) (2025-12-09)
+
+
+### Features
+
+* Add utility function to get S3 bucket ARN from an object ARN ([f583e2e](https://github.com/cloud-copilot/iam-utils/commit/f583e2ebca0465310552a9d3a7a5331ab6c960ad))
+
 ## [0.1.36](https://github.com/cloud-copilot/iam-utils/compare/v0.1.35...v0.1.36) (2025-12-06)
 
 ## [0.1.35](https://github.com/cloud-copilot/iam-utils/compare/v0.1.34...v0.1.35) (2025-11-30)
