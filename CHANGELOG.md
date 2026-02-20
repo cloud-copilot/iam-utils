@@ -1,3 +1,10 @@
+## [0.1.45](https://github.com/cloud-copilot/iam-utils/compare/v0.1.44...v0.1.45) (2026-02-20)
+
+
+### Features
+
+* New function to see if an IAM action matches a given pattern. New utility to convert resource ARNs to regex. ([3528ac4](https://github.com/cloud-copilot/iam-utils/commit/3528ac4c927f261d80b0549588a7eb45e4271979))
+
 ## [0.1.44](https://github.com/cloud-copilot/iam-utils/compare/v0.1.43...v0.1.44) (2026-02-14)
 
 ## [0.1.43](https://github.com/cloud-copilot/iam-utils/compare/v0.1.42...v0.1.43) (2026-01-19)
