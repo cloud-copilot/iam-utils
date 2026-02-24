@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { ArnParts, splitArnParts } from './arn.js'
+import { type ArnParts, splitArnParts } from './arn.js'
 
 const splitArnPartsTests: {
   name: string
