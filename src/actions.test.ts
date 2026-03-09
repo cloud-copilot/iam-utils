@@ -180,7 +180,7 @@ describe('actionMatchesPattern', () => {
     it('should match a single character with question mark', () => {
       //Given an action and a pattern with a question mark wildcard
       const action = 's3:GetObject'
-      const pattern = 's3:GetObjec?'
+      const pattern = 's3:GetObjec?' // spellchecker:disable-line
 
       //When checking if the action matches the pattern
       const result = actionMatchesPattern(action, pattern)
@@ -192,7 +192,7 @@ describe('actionMatchesPattern', () => {
     it('should match multiple single characters with multiple question marks', () => {
       //Given an action and a pattern with multiple question marks
       const action = 's3:GetObject'
-      const pattern = 's3:GetObj???'
+      const pattern = 's3:GetObj???' // spellchecker:disable-line
 
       //When checking if the action matches the pattern
       const result = actionMatchesPattern(action, pattern)
@@ -203,8 +203,8 @@ describe('actionMatchesPattern', () => {
 
     it('should not match when question mark represents no character', () => {
       //Given an action shorter than expected by the pattern
-      const action = 's3:GetObjec'
-      const pattern = 's3:GetObjec?t'
+      const action = 's3:GetObjec' // spellchecker:disable-line
+      const pattern = 's3:GetObjec?t' // spellchecker:disable-line
 
       //When checking if the action matches the pattern
       const result = actionMatchesPattern(action, pattern)
@@ -216,7 +216,7 @@ describe('actionMatchesPattern', () => {
     it('should not match when action has more characters than pattern expects', () => {
       //Given an action with more characters than the pattern
       const action = 's3:GetObjects'
-      const pattern = 's3:GetObjec?'
+      const pattern = 's3:GetObjec?' // spellchecker:disable-line
 
       //When checking if the action matches the pattern
       const result = actionMatchesPattern(action, pattern)
@@ -268,7 +268,7 @@ describe('actionMatchesPattern', () => {
     it('should handle escaped unicode in pattern', () => {
       //Given an action with a regular character and pattern with escaped unicode
       const action = 's3:GetObject'
-      const pattern = 's3:GetObjec\\u0074'
+      const pattern = 's3:GetObjec\\u0074' // spellchecker:disable-line
 
       //When checking if the action matches the pattern
       const result = actionMatchesPattern(action, pattern)
@@ -279,7 +279,7 @@ describe('actionMatchesPattern', () => {
 
     it('should handle escaped unicode in action', () => {
       //Given an action with escaped unicode and a regular pattern
-      const action = 's3:GetObjec\\u0074'
+      const action = 's3:GetObjec\\u0074' // spellchecker:disable-line
       const pattern = 's3:GetObject'
 
       //When checking if the action matches the pattern
