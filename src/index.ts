@@ -10,5 +10,7 @@ export {
   isIamUserArn,
   isServicePrincipal
 } from './principals.js'
+export { convertResourcePatternToRegex } from './resourcePatterns.js'
 export { resourceArnWithWildcardsToRegex } from './resources.js'
+export { resourceStringMatchesResourceTypePattern } from './resourceTypes.js'
 export { bucketArn, isS3BucketOrObjectArn } from './s3.js'
