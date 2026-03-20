@@ -1,3 +1,10 @@
+## [0.1.54](https://github.com/cloud-copilot/iam-utils/compare/v0.1.53...v0.1.54) (2026-03-20)
+
+
+### Features
+
+* Add new utilities for comparing resource type definitions to resource arns ([cc4e50c](https://github.com/cloud-copilot/iam-utils/commit/cc4e50c46ea55ba89cef85d6bd0835bc9fe0d6d9))
+
 ## [0.1.53](https://github.com/cloud-copilot/iam-utils/compare/v0.1.52...v0.1.53) (2026-03-09)
 
 ## [0.1.52](https://github.com/cloud-copilot/iam-utils/compare/v0.1.51...v0.1.52) (2026-03-07)
