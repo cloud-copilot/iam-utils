@@ -1,3 +1,10 @@
+## [0.1.63](https://github.com/cloud-copilot/iam-utils/compare/v0.1.62...v0.1.63) (2026-05-11)
+
+
+### Features
+
+* Function to determine which context actions to not support account and org global IAM context keys ([19c2436](https://github.com/cloud-copilot/iam-utils/commit/19c243604028d455f4134a78e3199be7ed0c896e))
+
 ## [0.1.62](https://github.com/cloud-copilot/iam-utils/compare/v0.1.61...v0.1.62) (2026-05-10)
 
 ## [0.1.61](https://github.com/cloud-copilot/iam-utils/compare/v0.1.60...v0.1.61) (2026-05-10)
