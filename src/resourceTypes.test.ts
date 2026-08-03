@@ -134,6 +134,31 @@ const resourceStringMatchesResourcePatternTests: {
     matches: {
       'arn:${Partition}:s3:::${BucketName}/${ObjectName}': true
     }
+  },
+  // A trailing variable spans slashes, so a sub-resource ARN matches its own
+  // type AND, deliberately, its parent's. Disambiguating between the two needs
+  // the service's full type list and happens in callers that choose one type.
+  {
+    pattern:
+      'arn:aws:dynamodb:us-east-1:123456789012:table/SyntheticSubscribers/stream/2024-01-01T00:00:00.000',
+    matches: {
+      'arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/stream/${StreamLabel}': true,
+      // The trailing ${TableName} absorbs the stream suffix.
+      'arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}': true,
+      'arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/index/${IndexName}': false,
+      'arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/backup/${BackupName}': false
+    }
+  },
+  // S3 access point objects: the trailing variables absorb slashes.
+  {
+    pattern: 'arn:aws:s3:us-east-1:123456789012:accesspoint/example-ap/object/a/b/c.txt',
+    matches: {
+      // The trailing ${AccessPointName} absorbs the object suffix.
+      'arn:${Partition}:s3:${Region}:${Account}:accesspoint/${AccessPointName}': true,
+      'arn:${Partition}:s3:${Region}:${Account}:accesspoint/${AccessPointName}/object/${ObjectName}': true,
+      'arn:${Partition}:s3:::${BucketName}': false,
+      'arn:${Partition}:s3:::${BucketName}/${ObjectName}': false
+    }
   }
 ]
 
