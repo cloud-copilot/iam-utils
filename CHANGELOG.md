@@ -1,3 +1,10 @@
+## [0.1.76](https://github.com/cloud-copilot/iam-utils/compare/v0.1.75...v0.1.76) (2026-08-03)
+
+
+### Bug Fixes
+
+* port resource type regression tests ([f9ab350](https://github.com/cloud-copilot/iam-utils/commit/f9ab350291936877ffce91688bad144296430620))
+
 ## [0.1.75](https://github.com/cloud-copilot/iam-utils/compare/v0.1.74...v0.1.75) (2026-08-01)
 
 ## [0.1.74](https://github.com/cloud-copilot/iam-utils/compare/v0.1.73...v0.1.74) (2026-07-25)
