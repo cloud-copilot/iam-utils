@@ -1,3 +1,10 @@
+## [0.1.77](https://github.com/cloud-copilot/iam-utils/compare/v0.1.76...v0.1.77) (2026-08-05)
+
+
+### Bug Fixes
+
+* match resource type arn patterns case-insensitively ([8348fef](https://github.com/cloud-copilot/iam-utils/commit/8348fefa9e545ec0e45dbe35272db659ea34645b))
+
 ## [0.1.76](https://github.com/cloud-copilot/iam-utils/compare/v0.1.75...v0.1.76) (2026-08-03)
 
 
