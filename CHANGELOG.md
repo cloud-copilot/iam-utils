@@ -1,3 +1,10 @@
+## [0.1.78](https://github.com/cloud-copilot/iam-utils/compare/v0.1.77...v0.1.78) (2026-08-05)
+
+
+### Features
+
+* improve resource type pattern matching ([455fdff](https://github.com/cloud-copilot/iam-utils/commit/455fdff40a63a6dbb9ba321ff3fe437e71f80333))
+
 ## [0.1.77](https://github.com/cloud-copilot/iam-utils/compare/v0.1.76...v0.1.77) (2026-08-05)
 
 
