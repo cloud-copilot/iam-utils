@@ -102,7 +102,7 @@ export function resourceStringMatchesResourceTypePattern(
 
     const resourceComponentPattern =
       '^' + resourceComponent.replace(/\?/g, '.').replace(/\*/g, '.*?') + '$'
-    const regex = new RegExp(resourceComponentPattern)
+    const regex = new RegExp(resourceComponentPattern, 'i')
     const match = patternComponent.match(regex)
     if (match) {
       if (isLastPattern && resourceComponent.endsWith('*')) {
@@ -141,7 +141,16 @@ function resourceComponentMatchesResourceTypeComponent(
   resourceComponent: string | undefined,
   resourceTypeComponent: string | undefined
 ): boolean {
-  if (resourceTypeComponent === '*' || resourceTypeComponent === resourceComponent) {
+  if (resourceTypeComponent === '*') {
+    return true
+  }
+
+  if (
+    resourceComponent !== undefined &&
+    resourceTypeComponent !== undefined &&
+    resourceTypeComponent.localeCompare(resourceComponent, undefined, { sensitivity: 'accent' }) ===
+      0
+  ) {
     return true
   }
 
@@ -155,7 +164,7 @@ function resourceComponentMatchesResourceTypeComponent(
   }
 
   const pattern = convertResourcePatternToRegex(resourceTypeComponent)
-  const regex = new RegExp(pattern)
+  const regex = new RegExp(pattern, 'i')
   const match = resourceComponent.match(regex)
   return !!match
 }

@@ -135,6 +135,21 @@ const resourceStringMatchesResourcePatternTests: {
       'arn:${Partition}:s3:::${BucketName}/${ObjectName}': true
     }
   },
+  // Static ARN resource-type labels can differ in case between iam-data and concrete AWS ARNs.
+  {
+    pattern:
+      'arn:AWS:GuardDuty:us-east-1:123456789012:detector/example-detector/publishingDestination/example-destination',
+    matches: {
+      'arn:${Partition}:guardduty:${Region}:${Account}:detector/${DetectorId}/publishingdestination/${PublishingDestinationId}': true
+    }
+  },
+  {
+    pattern:
+      'arn:aws:guardduty:us-east-1:123456789012:detector/example-detector/publishingdestination/example-destination',
+    matches: {
+      'arn:${Partition}:guardduty:${Region}:${Account}:detector/${DetectorId}/publishingDestination/${PublishingDestinationId}': true
+    }
+  },
   // A trailing variable spans slashes, so a sub-resource ARN matches its own
   // type AND, deliberately, its parent's. Disambiguating between the two needs
   // the service's full type list and happens in callers that choose one type.
