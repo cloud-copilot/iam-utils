@@ -1,3 +1,5 @@
+## [0.1.82](https://github.com/cloud-copilot/iam-utils/compare/v0.1.81...v0.1.82) (2026-08-29)
+
 ## [0.1.81](https://github.com/cloud-copilot/iam-utils/compare/v0.1.80...v0.1.81) (2026-08-22)
 
 ## [0.1.80](https://github.com/cloud-copilot/iam-utils/compare/v0.1.79...v0.1.80) (2026-08-15)
