@@ -30,7 +30,7 @@ const awsResourceInfoExcludedActions = new Set([
  *
  * AWS does not populate `aws:ResourceAccount`, `aws:ResourceOrgID`, or
  * `aws:ResourceOrgPaths` for every action. This predicate captures the documented
- * excluded actions currently used by Cloud Copilot request-context generation.
+ * excluded actions currently used by Act Security request-context generation.
  *
  * @param action - IAM action to inspect, such as `s3:GetObject`.
  * @returns True when AWS resource-information context keys are not available.
