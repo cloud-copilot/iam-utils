@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/cloud-copilot/iam-utils.git"
+    "url": "git+ssh://git@github.com/act-security-labs/iam-utils.git"
   },
   "license": "AGPL-3.0-or-later",
   "author": "Act Security",
